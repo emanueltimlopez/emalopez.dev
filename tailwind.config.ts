@@ -8,13 +8,33 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    fontFamily: {
+      'sans': ['"Inria Sans"'],
+      'serif': ['"Inknut Antiqua"'],
     },
+    colors: {
+      'normal-text': '#3D405B',
+      'secondary-text': '#E07A5F'
+    },
+    boxShadow: {
+      'normal': '-10px -10px 4px 0px rgba(0,0,0,0.1)',
+      'reverse': '10px 10px 4px 0px rgba(0,0,0,0.1)'
+    },
+    keyframes: {
+      'slideDown': {
+        "0%": {
+          transform: 'translateY(-100%)'
+        },
+        "100%": {
+          transform: 'translateY(0)'
+        }
+      }
+    },
+    animation: {
+      'header': 'slideDown 0.50s ease-out'
+    }
+    }
   },
   plugins: [],
-};
+}
 export default config;
