@@ -1,6 +1,8 @@
 'use client'
 
 import { PropsWithChildren, useEffect, useState } from "react"
+import { CTAMobile } from "../hero/cta-mobile"
+import { CTAHeader } from "./cta-header"
 
 export function Menu({ children }: PropsWithChildren) {
   const [moveHeader, setMoveHeader] = useState(false)
@@ -27,6 +29,7 @@ export function Menu({ children }: PropsWithChildren) {
       <ul className={`flex text-lg gap-10 m-6 py-4 px-6 rounded-[70px] ${moveHeader && 'backdrop-blur-sm backdrop-brightness-110'}`}>
         { children }
       </ul>
+      {moveHeader && <CTAHeader/>}
     </div>
   )
 }

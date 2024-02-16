@@ -3,7 +3,7 @@ import { Header } from "./header";
 import { Menu } from "./header/menu";
 import { Hero } from "./hero";
 import { Title } from "./hero/title";
-import { Projects } from "./projects";
+import { projects } from "./projects-data";
 import { TitleSection } from "./title-section";
 import { About } from "./about";
 import { Contact } from "./contact";
@@ -17,6 +17,10 @@ import { Links } from "./about/links";
 import { LinkExternal } from "./about/link-external";
 import { Email } from "./contact/email";
 import { CTAMobile } from "./hero/cta-mobile";
+import { List } from "./projects/list";
+import { Project } from "./projects/project";
+import { Projects } from "./projects";
+import { Footer } from "./footer";
 
 export default function Home() {
   return (
@@ -42,6 +46,9 @@ export default function Home() {
       <Limit>
         <Projects>
           <TitleSection section="Projects" text={<span>Some things<br/> {"I've"} worked on</span>}/>
+          <List>
+            { projects.map((p) => <Project key={p.title} {...p} />) }
+          </List>
         </Projects>
       </Limit>
       
@@ -73,6 +80,7 @@ export default function Home() {
         </Contact>
       </Limit>
 
+      <Footer />
     </main>
   );
 }
