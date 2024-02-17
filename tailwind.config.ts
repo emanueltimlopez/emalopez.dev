@@ -8,10 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-    fontFamily: {
-      'sans': ['"Inria Sans"'],
-      'serif': ['"Inknut Antiqua"'],
-    },
     colors: {
       'normal-text': '#3D405B',
       'secondary-text': '#E07A5F'
