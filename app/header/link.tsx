@@ -5,5 +5,5 @@ interface Props {
 }
 
 export function Link({ id, children }: PropsWithChildren<Props>) {
-  return <li><a href={`#${id}`}>{ children }</a></li>
+  return <li><a href={`#${id}`} className="hover:italic" >{ children }</a></li>
 }
