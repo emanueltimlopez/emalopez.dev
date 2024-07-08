@@ -54,7 +54,7 @@ export default async function Page({ params: { slug } }: IProps) {
           </div>
                         <div className='p-6'>
               <Image
-                src={post.cover?.filePath.replace('../public', '')}
+                src={post.cover?.filePath.replace('../public', '') || ""}
                 width={500}
                 height={350}
                 priority={true}
