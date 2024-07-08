@@ -28,9 +28,10 @@ export default function Home() {
       <Overlay>
         <Header>
           <Menu>
-            <Link id="projects">Projects</Link>
-            <Link id="about">About</Link>
-            <Link id="contact">Contact</Link>
+            <Link id="/#projects">Proyectos</Link>
+            <Link id="/#about">Sobre mí</Link>
+            <Link id="/articulos">Articulos</Link>
+            <Link id="/#contact">Contacto</Link>
           </Menu>
         </Header>
         <Hero>
@@ -45,7 +46,7 @@ export default function Home() {
 
       <Limit>
         <Projects>
-          <TitleSection section="Projects" text={<span>Some things<br/> {"I've"} worked on</span>}/>
+          <TitleSection section="Projects" text={<span>Algunas cosas<br/> en las que estoy<br/> trabajando</span>}/>
           <List>
             { projects.map((p) => <Project key={p.title} {...p} />) }
           </List>
@@ -55,10 +56,12 @@ export default function Home() {
       <Overlay>
         <Limit>
           <About>
-            <TitleSection section="About" text={<span>I love what<br/> {"I'm"} doing</span>} />
+            <TitleSection section="About" text={<span>Me encanta<br/> lo que hago</span>} />
             <Text>
-            <p>I have been in the software development world for 15 years. I began as a freelance, then joined an agency, working on various projects, including game  development. Later on, I transitioned to a large company where I gained experience in scalability, quality, and leadership teams.</p>
-            <p>Now I work in technical consulting, creating apps, and helping to improve product discovery and delivery for startups.</p>
+            <p>Estoy en el mundo del desarrollo de software hace 15 años. Comencé como freelancer, luego me uní a una agencia, 
+                trabajando en varios proyectos, incluyendo el desarrollo de juegos. Más tarde, seguí mi carrera en una empresa grande
+                donde adquirí experiencia en escalabilidad, calidad y equipos de liderazgo.</p>
+            <p>Ahora me dedico a la consultoría técnica, ayudando a founders y equipos en startups a desarrollar sus productos y procesos.</p>
             <Links>
               <LinkExternal url="https://www.linkedin.com/in/emanuelplopez/">Linkedin</LinkExternal>
               <LinkExternal url="https://github.com/emanueltimlopez">Github</LinkExternal>
@@ -70,9 +73,9 @@ export default function Home() {
       
       <Limit>
         <Contact>
-          <TitleSection section="Contact" text={<span>Lets work<br/> together</span>} />
+          <TitleSection section="Contact" text={<span>Trabajemos<br/> juntos</span>} />
           <Text>
-            <p>Contact me and let me know what you want to build. {"I'll"} be happy to contribute.</p>
+            <p>Contame que queres construir y veamos en que te puedo ayudar.</p>
             <Email>
               pabloemanuellopez@gmail.com
             </Email>

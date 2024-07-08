@@ -9,18 +9,19 @@ export interface IProject {
 
 export const projects: IProject[] = [
   {
-    title: 'RocketCode',
-    description: 'Pre-recorded programming courses platform.',
-    link: 'https://pasaporterocketcode.com/',
-    stack: 'NextJS, Vercel, Sendgrid, ReactJS, Firebase, Typescript, Amplitud',
-    users: '4000+ students' 
+    title: "RocketCode",
+    description: "Plataforma de cursos pregrabados sobre programación en español.",
+    link: "https://pasaporterocketcode.com/",
+    stack: "NextJS, Vercel, Sendgrid, ReactJS, Firebase, Typescript, Amplitud",
+    users: "4000+ estudiantes",
   },
   {
-    title: 'Superb',
-    description: 'Token economy boards to reinforce behaviors in therapy for children.',
-    link: 'https://play.google.com/store/apps/details?id=com.wombat.superb&hl=es&gl=US',
-    stack: 'Vercel, React Native, Typescript, Expo, Play Store',
-    code: 'https://github.com/emanueltimlopez/superb',
-    users: '50+ users'
-  }
-]
+    title: "Superb",
+    description:
+      "Aplicacion con tableros de economía de fichas para reforzar conducta en terapia infantojuvenil",
+    link: "https://play.google.com/store/apps/details?id=com.wombat.superb&hl=es&gl=US",
+    stack: "Vercel, React Native, Typescript, Expo, Play Store",
+    code: "https://github.com/emanueltimlopez/superb",
+    users: "100+ usuarios",
+  },
+];

@@ -1,0 +1,37 @@
+{
+  "title": "My first post",
+  "date": "2023-07-20T00:00:00.000Z",
+  "excerpt": "This is my first post",
+  "tags": [
+    "next.js",
+    "blog",
+    "static blog",
+    "tailwind",
+    "mdx",
+    "contentlayer"
+  ],
+  "cover": {
+    "filePath": "me.png",
+    "relativeFilePath": "me.png",
+    "format": "png",
+    "height": 277,
+    "width": 148,
+    "aspectRatio": 0.5342960288808665,
+    "blurhashDataUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAA+0lEQVR4nCXMsUrDYADE8e8xrNamJk1Jothga4qtJEFTahaRDoKogy8gTg5OTg7SwVXBwakK6pJFEC2o4JihllZibdHBx/jbtMOPu+E4oWfSGKpMnJqaJqukUOVpFClJWppCLJoGseKQnEyQSIzNagp6dgZhL+Wp2EVqTp7u4x29p3seTg9Go4Wchqi4Jaory+ytlXm/afAXXPFaPyKXkShbJsL3XHzPZme1wK6tc7m5wfn+Nr6lEb+LqucQC5pNtpx5XEMiNTmBU7LGg3ZvQHfwi7deI+xENE4OOa6fMWcWCJ5fEJ3+D7H2V59W9M3F9S0fwx5+RryFLf4BfreJcurHEC0AAAArdEVYdENyZWF0aW9uIFRpbWUARnJpLCAwNSBKdWwgMjAyNCAyMjoyNzowNSBHTVQ80V7jAAAALXRFWHRTb2Z0d2FyZQBnaXRodWIuY29tL21hdG1lbi9JbWFnZVNjcmlwdCB2MS4zLjAYxp/2AAAAAElFTkSuQmCC"
+  },
+  "body": {
+    "raw": " \nHello my first post!\n",
+    "code": "var Component=(()=>{var l=Object.create;var s=Object.defineProperty;var x=Object.getOwnPropertyDescriptor;var f=Object.getOwnPropertyNames;var d=Object.getPrototypeOf,u=Object.prototype.hasOwnProperty;var g=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),j=(t,e)=>{for(var n in e)s(t,n,{get:e[n],enumerable:!0})},i=(t,e,n,c)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let o of f(e))!u.call(t,o)&&o!==n&&s(t,o,{get:()=>e[o],enumerable:!(c=x(e,o))||c.enumerable});return t};var y=(t,e,n)=>(n=t!=null?l(d(t)):{},i(e||!t||!t.__esModule?s(n,\"default\",{value:t,enumerable:!0}):n,t)),_=t=>i(s({},\"__esModule\",{value:!0}),t);var m=g((C,a)=>{a.exports=_jsx_runtime});var w={};j(w,{default:()=>h,frontmatter:()=>b});var r=y(m()),b={title:\"My first post\",date:new Date(16898112e5),excerpt:\"This is my first post\",tags:[\"next.js\",\"blog\",\"static blog\",\"tailwind\",\"mdx\",\"contentlayer\"],cover:\"./me.png\"};function p(t){let e=Object.assign({p:\"p\"},t.components);return(0,r.jsx)(e.p,{children:\"Hello my first post!\"})}function M(t={}){let{wrapper:e}=t.components||{};return e?(0,r.jsx)(e,Object.assign({},t,{children:(0,r.jsx)(p,t)})):p(t)}var h=M;return _(w);})();\n;return Component;"
+  },
+  "_id": "lalala.mdx",
+  "_raw": {
+    "sourceFilePath": "lalala.mdx",
+    "sourceFileName": "lalala.mdx",
+    "sourceFileDir": ".",
+    "contentType": "mdx",
+    "flattenedPath": "lalala"
+  },
+  "type": "Article",
+  "url": "/articles/lalala",
+  "readTime": 1
+}
