@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
  
 import rehypeAutolinkHeadings, {
