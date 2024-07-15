@@ -11,7 +11,7 @@ export function Project({ title, link, code, description, stack, users }: IProje
         </div>
         <div className="flex gap-4">
           {link && <a href={link} target="_blank" className="flex gap-1 items-center">Link <IconExternal/></a>}
-          {code && <a href={code} target="_blank" className="flex gap-1 items-center">Code <IconCode/></a>}
+          {code && <a href={code} target="_blank" className="flex gap-1 items-center">Código <IconCode/></a>}
         </div>
       </div>
       <div className="flex flex-col gap-6">

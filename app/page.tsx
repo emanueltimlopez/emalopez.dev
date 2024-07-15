@@ -46,7 +46,7 @@ export default function Home() {
 
       <Limit>
         <Projects>
-          <TitleSection section="Projects" text={<span>Algunas cosas<br/> en las que estoy<br/> trabajando</span>}/>
+          <TitleSection section="Proyectos" text={<span>Algunas cosas<br/> en las que estoy<br/> trabajando</span>}/>
           <List>
             { projects.map((p) => <Project key={p.title} {...p} />) }
           </List>
@@ -56,7 +56,7 @@ export default function Home() {
       <Overlay>
         <Limit>
           <About>
-            <TitleSection section="About" text={<span>Me encanta<br/> lo que hago</span>} />
+            <TitleSection section="Sobre mí" text={<span>Me encanta<br/> lo que hago</span>} />
             <Text>
             <p>Estoy en el mundo del desarrollo de software hace 15 años. Comencé como freelancer, luego me uní a una agencia, 
                 trabajando en varios proyectos, incluyendo el desarrollo de juegos. Más tarde, seguí mi carrera en una empresa grande
@@ -73,7 +73,7 @@ export default function Home() {
       
       <Limit>
         <Contact>
-          <TitleSection section="Contact" text={<span>Trabajemos<br/> juntos</span>} />
+          <TitleSection section="Contacto" text={<span>Trabajemos<br/> juntos</span>} />
           <Text>
             <p>Contame que queres construir y veamos en que te puedo ayudar.</p>
             <Email>
