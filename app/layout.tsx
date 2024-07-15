@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inknut_Antiqua, Inria_Sans } from "next/font/google";
 import "./globals.css";
+import { CSPostHogProvider } from "./posthog";
 
 const inria = Inria_Sans({ subsets: ['latin'], weight: ['300', '700'], variable: '--font-inria' });
 const inknut = Inknut_Antiqua({ subsets: ['latin'], weight: ['300', '700'], variable: '--font-inknut' });
@@ -17,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inria.variable} ${inknut.variable}`}>{children}</body>
-    </html>
+      <CSPostHogProvider>
+        <body className={`${inria.variable} ${inknut.variable}`}>{children}</body>
+      </CSPostHogProvider>
+    </html >
   );
 }
