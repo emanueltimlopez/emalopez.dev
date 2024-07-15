@@ -17,7 +17,7 @@ export function Email({ children }: PropsWithChildren) {
     {!copied && <button className="flex text-base md:text-xl items-center underline" onClick={() => copyToClipboard(children?.toString() || '')}>
       { children } <Icon />
     </button>}
-    {copied && <button className="text-xl" onClick={() => { setCopied(false) }}>Email copied!</button>}
+    {copied && <button className="text-xl" onClick={() => { setCopied(false) }}>Email copiado!</button>}
   </>)
 }
 
