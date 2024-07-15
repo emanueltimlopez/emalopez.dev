@@ -34,29 +34,29 @@ export default async function Page({ params: { slug } }: IProps) {
           </Menu>
         </Header>
         <Limit>
-          <div className='flex'>
-          <div className="flex flex-col m-10">
-            <h1 className="font-serif font-bold text-2xl md:text-3xl z-10">
-              {post.title}
-            </h1>
-            <p className="text-base mt-4 mb-2 z-10 max-w-[300px] md:max-w-none">
-              {post.excerpt}
-            </p>
-            <div>
-              <time
-                dateTime={post?.date}
-                className="hidden"
-              >
-                {format(parseISO(post?.date), 'MMM dd, yyyy')}
-              </time>
-              <p>{post.readTime} min read</p>
+          <div className='flex flex-col md:flex-row'>
+            <div className="flex flex-col m-10">
+              <h1 className="font-serif font-bold text-2xl md:text-3xl z-10">
+                {post.title}
+              </h1>
+              <p className="text-base mt-4 mb-2 z-10 max-w-[300px] md:max-w-none">
+                {post.excerpt}
+              </p>
+              <div>
+                <time
+                  dateTime={post?.date}
+                  className="hidden"
+                >
+                  {format(parseISO(post?.date), 'MMM dd, yyyy')}
+                </time>
+                <p>{post.readTime} minutos de lectura</p>
+              </div>
             </div>
-          </div>
-                        <div className='p-6'>
+            <div className='p-6'>
               <Image
-                src={post.cover?.filePath.replace('../public', '') || ""}
-                width={500}
-                height={350}
+                src={post.cover?.filePath.replace('../public', '') || ""}
+                width={650}
+                height={400}
                 priority={true}
                 alt={post.title}
               />
@@ -65,7 +65,7 @@ export default async function Page({ params: { slug } }: IProps) {
         </Limit>
       </Overlay>
       <Limit>
-        <div className='m-10'>
+        <div className='m-10 md:m-24'>
           <MDXContent code={post.body.code} />
         </div>
       </Limit>

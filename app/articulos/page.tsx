@@ -47,8 +47,8 @@ export default function Thoughts() {
           />
           <List>
             {founders.map((post) => (
-              <a key={post._id} href={post.url} className="flex">
-                <div className="flex flex-col">
+              <a key={post._id} href={post.url} className="flex w-full">
+                <div className="flex flex-col w-full">
                   <div className="font-bold text-xl">{post.title}</div>
                   <p className="italic py-2">{post.excerpt}</p>
                   <span className="self-end font-bold text-sm">{post.readTime} minutos de lectura</span>
@@ -74,8 +74,15 @@ export default function Thoughts() {
           />
           <List>
             {devs.map((post) => (
-              <a href={post.url}>
-                <div key={post._id}>{post.title}</div>
+              <a key={post._id} href={post.url} className="flex w-full">
+                <div className="flex flex-col w-full">
+                  <div className="font-bold text-xl">{post.title}</div>
+                  <p className="italic py-2">{post.excerpt}</p>
+                  <span className="self-end font-bold text-sm">{post.readTime} minutos de lectura</span>
+                </div>
+                {/*<div className="min-w-[150px] p-4">
+                  <Image src={post.cover?.filePath.replace('../public', '')} width={300} height={200}/>
+                </div>*/}
               </a>
             ))}
           </List>
