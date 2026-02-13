@@ -17,12 +17,21 @@ import { Links } from "./about/links";
 import { LinkExternal } from "./about/link-external";
 import { Email } from "./contact/email";
 import { CTAMobile } from "./hero/cta-mobile";
-import { List } from "./projects/list";
+import { List as ProjectList } from "./projects/list";
 import { Project } from "./projects/project";
 import { Projects } from "./projects";
 import { Footer } from "./footer";
+import { allArticles } from 'contentlayer/generated';
+import { compareDesc } from 'date-fns';
+import { Blog } from "./blog";
+import { List as BlogList } from "./blog/list";
+import { Post as BlogPost } from "./blog/post";
 
 export default function Home() {
+  const sortedPosts = allArticles.sort((a, b) =>
+    compareDesc(new Date(a.date), new Date(b.date)),
+  );
+
   return (
     <main>
       <Overlay>
@@ -45,12 +54,21 @@ export default function Home() {
       </Overlay>
 
       <Limit>
-        <Projects>
-          <TitleSection section="Proyectos" text={<span>Algunas cosas<br/> en las que estoy<br/> trabajando</span>}/>
-          <List>
-            { projects.map((p) => <Project key={p.title} {...p} />) }
-          </List>
-        </Projects>
+        <div className="md:grid md:grid-cols-2">
+          <Projects>
+            <TitleSection section="Proyectos" text={<span>Algunas cosas<br/> en las que estoy<br/> trabajando</span>}/>
+            <ProjectList>
+              { projects.map((p) => <Project key={p.title} {...p} />) }
+            </ProjectList>
+          </Projects>
+
+          <Blog>
+             <TitleSection section="Blog" text={<span>Mis últimos<br/> artículos</span>}/>
+             <BlogList>
+               { sortedPosts.slice(0, 3).map((post) => <BlogPost key={post._id} {...post} />) }
+             </BlogList>
+          </Blog>
+        </div>
       </Limit>
       
       <Overlay>
